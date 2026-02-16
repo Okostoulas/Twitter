@@ -6,10 +6,21 @@
 
 <div id="microposts">
   <% @microposts.each do |micropost| %>
-    <%= render micropost %>
-    <p>
-      <%= link_to "Show this micropost", micropost %>
-    </p>
+    <div>
+      <h3>
+        From: <%= micropost.user.name %>
+      </h3>
+
+      <h4>
+        <%= micropost.content %>
+      </h4>
+
+      <p>
+        <%= link_to "Show this micropost", micropost %>
+      </p>
+    </div>
+    <hr>
+
   <% end %>
 </div>
 
