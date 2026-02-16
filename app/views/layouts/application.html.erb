@@ -24,6 +24,14 @@
   </head>
 
   <body>
+
+  <nav>
+    <%= link_to "Users", root_path %>
+    <%= link_to "Microposts", microposts_path %>
+  </nav>
+
+  <main>
     <%= yield %>
+  </main>
   </body>
 </html>
